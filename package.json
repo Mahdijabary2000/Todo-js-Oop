@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Mahdijabary2000/Todo-js-Oop#readme",
   "devDependencies": {
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.2",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
     "webpack": "^5.82.1",
     "webpack-cli": "^5.1.1"
   }
