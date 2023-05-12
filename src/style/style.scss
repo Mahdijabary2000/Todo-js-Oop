@@ -1,3 +1,9 @@
+$icon-color:#ec4899;
+$btn-primary:#a567ce;
+$btn-secondary: #db79c1;
+$hover-btn-primary:#7303c0;
+$hover-btn-secondary:#ec38bc;
+$text-Todo:#38bdf8;;
 *{
     padding: 0;
     margin: 0;
@@ -118,30 +124,27 @@ body {
     padding: 0.5rem 2rem;
   }
   .btn-primary{
-      background-color: #a567ce;
+      background-color:$btn-primary;
       color: white;
       border: none;
       font-size: 0.75rem;
       &:hover{
-      background-color: #7303c0;
+      background-color: $hover-btn-primary;
     }
   }
   .btn-secondary{
-    background-color: #db79c1;
+    background-color:$btn-secondary;
     color: #fff;  
     font-size: 0.75rem;
-     
      &:hover{
-          background-color: #ec38bc;
+          background-color:$hover-btn-secondary ;
      }
-     
   }
   .edit,.trash{
-    color: #ec4899;
-
+    color: $icon-color;
   }
   .textTodo{
-    color: #38bdf8;
+    color: $text-Todo;
     font-size: 14px;
     font-weight: 100;
     font-family: monospace;
