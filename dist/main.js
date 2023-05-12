@@ -1,46 +1,547 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/helpres.js":
-/*!************************!*\
-  !*** ./src/helpres.js ***!
-  \************************/
+/******/ 	var __webpack_modules__ = ([
+/* 0 */,
+/* 1 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createTaskDiv\": () => (/* binding */ createTaskDiv)\n/* harmony export */ });\n\r\nfunction createTaskDiv(text, id, deleteCallback, editCallback) {\r\n    const taskDiv = document.createElement(\"div\");\r\n    taskDiv.setAttribute(\"id\", id);\r\n  //creat text todo\r\n    const taskText = document.createElement(\"span\");\r\n    taskText.classList.add(\"fw-bold\");\r\n    taskText.innerHTML = text;\r\n  \r\n    const options = document.createElement(\"span\");\r\n    options.classList.add(\"options\");\r\n  //add editIcon to div\r\n    const editIcon = document.createElement(\"i\");\r\n    editIcon.classList.add(\"fas\", \"fa-edit\");\r\n    editIcon.setAttribute(\"data-bs-toggle\", \"modal\");\r\n    editIcon.setAttribute(\"data-bs-target\", \"#form\");\r\n    editIcon.addEventListener(\"click\", () => editCallback(id));\r\n  //add deleteIcon to div\r\n    const deleteIcon = document.createElement(\"i\");\r\n    deleteIcon.classList.add(\"fas\", \"fa-trash-alt\");\r\n    deleteIcon.addEventListener(\"click\", () => deleteCallback(id));\r\n  //add options to boxTodo\r\n    options.appendChild(editIcon);\r\n    options.appendChild(deleteIcon);\r\n  \r\n    taskDiv.appendChild(taskText);\r\n    taskDiv.appendChild(options);\r\n  \r\n    return taskDiv;\r\n  }\n\n//# sourceURL=webpack://todo(js)oop/./src/helpres.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
 
 /***/ }),
+/* 2 */
+/***/ ((module) => {
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todoList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todoList */ \"./src/todoList.js\");\n\r\n\r\n//Access\r\nconst todoList = new _todoList__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\r\n  document.getElementById(\"form\"),\r\n  document.getElementById(\"textInput\"),\r\n  document.getElementById(\"tasks\"),\r\n  document.getElementById(\"add\")\r\n);\n\n//# sourceURL=webpack://todo(js)oop/./src/index.js?");
+
+var stylesInDOM = [];
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+  for (var i = 0; i < stylesInDOM.length; i++) {
+    if (stylesInDOM[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+  return result;
+}
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var indexByIdentifier = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3],
+      supports: item[4],
+      layer: item[5]
+    };
+    if (indexByIdentifier !== -1) {
+      stylesInDOM[indexByIdentifier].references++;
+      stylesInDOM[indexByIdentifier].updater(obj);
+    } else {
+      var updater = addElementStyle(obj, options);
+      options.byIndex = i;
+      stylesInDOM.splice(i, 0, {
+        identifier: identifier,
+        updater: updater,
+        references: 1
+      });
+    }
+    identifiers.push(identifier);
+  }
+  return identifiers;
+}
+function addElementStyle(obj, options) {
+  var api = options.domAPI(options);
+  api.update(obj);
+  var updater = function updater(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {
+        return;
+      }
+      api.update(obj = newObj);
+    } else {
+      api.remove();
+    }
+  };
+  return updater;
+}
+module.exports = function (list, options) {
+  options = options || {};
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDOM[index].references--;
+    }
+    var newLastIdentifiers = modulesToDom(newList, options);
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+      var _index = getIndexByIdentifier(_identifier);
+      if (stylesInDOM[_index].references === 0) {
+        stylesInDOM[_index].updater();
+        stylesInDOM.splice(_index, 1);
+      }
+    }
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
 
 /***/ }),
+/* 3 */
+/***/ ((module) => {
 
-/***/ "./src/todoList.js":
-/*!*************************!*\
-  !*** ./src/todoList.js ***!
-  \*************************/
+
+
+/* istanbul ignore next  */
+function apply(styleElement, options, obj) {
+  var css = "";
+  if (obj.supports) {
+    css += "@supports (".concat(obj.supports, ") {");
+  }
+  if (obj.media) {
+    css += "@media ".concat(obj.media, " {");
+  }
+  var needLayer = typeof obj.layer !== "undefined";
+  if (needLayer) {
+    css += "@layer".concat(obj.layer.length > 0 ? " ".concat(obj.layer) : "", " {");
+  }
+  css += obj.css;
+  if (needLayer) {
+    css += "}";
+  }
+  if (obj.media) {
+    css += "}";
+  }
+  if (obj.supports) {
+    css += "}";
+  }
+  var sourceMap = obj.sourceMap;
+  if (sourceMap && typeof btoa !== "undefined") {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  }
+
+  // For old IE
+  /* istanbul ignore if  */
+  options.styleTagTransform(css, styleElement, options.options);
+}
+function removeStyleElement(styleElement) {
+  // istanbul ignore if
+  if (styleElement.parentNode === null) {
+    return false;
+  }
+  styleElement.parentNode.removeChild(styleElement);
+}
+
+/* istanbul ignore next  */
+function domAPI(options) {
+  if (typeof document === "undefined") {
+    return {
+      update: function update() {},
+      remove: function remove() {}
+    };
+  }
+  var styleElement = options.insertStyleElement(options);
+  return {
+    update: function update(obj) {
+      apply(styleElement, options, obj);
+    },
+    remove: function remove() {
+      removeStyleElement(styleElement);
+    }
+  };
+}
+module.exports = domAPI;
+
+/***/ }),
+/* 4 */
+/***/ ((module) => {
+
+
+
+var memo = {};
+
+/* istanbul ignore next  */
+function getTarget(target) {
+  if (typeof memo[target] === "undefined") {
+    var styleTarget = document.querySelector(target);
+
+    // Special case to return head of iframe instead of iframe itself
+    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+      try {
+        // This will throw an exception if access to iframe is blocked
+        // due to cross-origin restrictions
+        styleTarget = styleTarget.contentDocument.head;
+      } catch (e) {
+        // istanbul ignore next
+        styleTarget = null;
+      }
+    }
+    memo[target] = styleTarget;
+  }
+  return memo[target];
+}
+
+/* istanbul ignore next  */
+function insertBySelector(insert, style) {
+  var target = getTarget(insert);
+  if (!target) {
+    throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+  }
+  target.appendChild(style);
+}
+module.exports = insertBySelector;
+
+/***/ }),
+/* 5 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+
+/* istanbul ignore next  */
+function setAttributesWithoutAttributes(styleElement) {
+  var nonce =  true ? __webpack_require__.nc : 0;
+  if (nonce) {
+    styleElement.setAttribute("nonce", nonce);
+  }
+}
+module.exports = setAttributesWithoutAttributes;
+
+/***/ }),
+/* 6 */
+/***/ ((module) => {
+
+
+
+/* istanbul ignore next  */
+function insertStyleElement(options) {
+  var element = document.createElement("style");
+  options.setAttributes(element, options.attributes);
+  options.insert(element, options.options);
+  return element;
+}
+module.exports = insertStyleElement;
+
+/***/ }),
+/* 7 */
+/***/ ((module) => {
+
+
+
+/* istanbul ignore next  */
+function styleTagTransform(css, styleElement) {
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css;
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild);
+    }
+    styleElement.appendChild(document.createTextNode(css));
+  }
+}
+module.exports = styleTagTransform;
+
+/***/ }),
+/* 8 */
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: sans-serif;\n  margin: 0 50px;\n  display: flex;\n  justify-content: center;\n}\n\n*::-webkit-scrollbar {\n  background-color: #fff;\n  width: 12px;\n}\n\n*::-webkit-scrollbar-thumb {\n  background-color: #bae6fd;\n  border-radius: 16px;\n}\n\n.conteinet {\n  margin-top: 2rem;\n}\n\n.app {\n  background-color: #cffafe;\n  width: 500px;\n  border-radius: 8px;\n  padding: 15px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.title {\n  text-align: center;\n  color: #38bdf8;\n  font-weight: 900;\n  font-size: 35px;\n}\n\n.text {\n  text-align: center;\n  color: #e879f9;\n  font-family: monospace;\n}\n\n.add {\n  color: gray;\n}\n\n#addNew {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: rgb(250, 250, 250);\n  width: 300px;\n  height: 40px;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  border-radius: 5px;\n  cursor: pointer;\n  margin-bottom: 2rem;\n}\n\n.fa-plus {\n  background-color: #f2b5d4;\n  padding: 8px;\n  border-radius: 3px;\n}\n\n#tasks {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 14px;\n  width: 100%;\n}\n\n#tasks div {\n  background-color: #bae6fd;\n  border-radius: 6px;\n  padding: 9px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 4px;\n  width: 300px;\n  height: 60px;\n}\n\n#tasks div .options {\n  justify-self: center;\n  display: flex;\n  gap: 20px;\n}\n\n#tasks div .options i {\n  cursor: pointer;\n}\n\n.modal-dialog {\n  display: flex;\n  justify-content: center;\n}\n\n.modal-content {\n  background-color: rgba(255, 255, 255, 0.2);\n  backdrop-filter: blur(8px);\n  border-radius: 1rem;\n  width: 500px;\n  height: 250px;\n}\n\n.modal-title {\n  color: white;\n}\n\n.modal-body {\n  display: flex;\n  align-items: center;\n}\n.modal-body .form-control {\n  height: 30px;\n  outline: none;\n}\n\n.btn {\n  padding: 0.5rem 2rem;\n}\n\n.btn-primary {\n  background-color: #a567ce;\n  color: white;\n  border: none;\n  font-size: 0.75rem;\n}\n.btn-primary:hover {\n  background-color: #7303c0;\n}\n\n.btn-secondary {\n  background-color: #db79c1;\n  color: #fff;\n  font-size: 0.75rem;\n}\n.btn-secondary:hover {\n  background-color: #ec38bc;\n}\n\n.fa-edit, .fa-trash-alt {\n  color: #ec4899;\n}\n\n.fw-bold {\n  color: #38bdf8;\n  font-size: 14px;\n  font-weight: 100;\n  font-family: monospace;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+/* 9 */
+/***/ ((module) => {
+
+
+
+module.exports = function (i) {
+  return i[1];
+};
+
+/***/ }),
+/* 10 */
+/***/ ((module) => {
+
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+module.exports = function (cssWithMappingToString) {
+  var list = [];
+
+  // return the list of modules as css string
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = "";
+      var needLayer = typeof item[5] !== "undefined";
+      if (item[4]) {
+        content += "@supports (".concat(item[4], ") {");
+      }
+      if (item[2]) {
+        content += "@media ".concat(item[2], " {");
+      }
+      if (needLayer) {
+        content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
+      }
+      content += cssWithMappingToString(item);
+      if (needLayer) {
+        content += "}";
+      }
+      if (item[2]) {
+        content += "}";
+      }
+      if (item[4]) {
+        content += "}";
+      }
+      return content;
+    }).join("");
+  };
+
+  // import a list of modules into the list
+  list.i = function i(modules, media, dedupe, supports, layer) {
+    if (typeof modules === "string") {
+      modules = [[null, modules, undefined]];
+    }
+    var alreadyImportedModules = {};
+    if (dedupe) {
+      for (var k = 0; k < this.length; k++) {
+        var id = this[k][0];
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+    for (var _k = 0; _k < modules.length; _k++) {
+      var item = [].concat(modules[_k]);
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        continue;
+      }
+      if (typeof layer !== "undefined") {
+        if (typeof item[5] === "undefined") {
+          item[5] = layer;
+        } else {
+          item[1] = "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {").concat(item[1], "}");
+          item[5] = layer;
+        }
+      }
+      if (media) {
+        if (!item[2]) {
+          item[2] = media;
+        } else {
+          item[1] = "@media ".concat(item[2], " {").concat(item[1], "}");
+          item[2] = media;
+        }
+      }
+      if (supports) {
+        if (!item[4]) {
+          item[4] = "".concat(supports);
+        } else {
+          item[1] = "@supports (".concat(item[4], ") {").concat(item[1], "}");
+          item[4] = supports;
+        }
+      }
+      list.push(item);
+    }
+  };
+  return list;
+};
+
+/***/ }),
+/* 11 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _helpres_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpres.js */ \"./src/helpres.js\");\n\r\n\r\n\r\nclass TodoList {\r\n  constructor(form, textInput, tasks, add) {\r\n    this.form = form;\r\n    this.textInput = textInput;\r\n    this.tasks = tasks;\r\n    this.add = add;\r\n\r\n    this.data = JSON.parse(localStorage.getItem(\"data\")) || [];\r\n//eventListener:\r\n    this.addListeners();\r\n    this.createTasks();\r\n  }\r\n\r\n  addListeners() {\r\n    this.form.addEventListener(\"submit\", (e) => {\r\n      e.preventDefault();\r\n      this.formValidation();\r\n    });\r\n      \r\n    this.add.addEventListener(\"click\", () => {\r\n      this.add.setAttribute(\"data-bs-dismiss\", \"\");\r\n    });\r\n  }\r\n//form Validation\r\n  formValidation() {\r\n    if (this.textInput.value === \"\") {\r\n      return;\r\n    }\r\n      \r\n    this.acceptData();\r\n    this.add.setAttribute(\"data-bs-dismiss\", \"modal\");\r\n    this.add.click();\r\n  }\r\n//acceptData\r\n  acceptData() {\r\n    this.data.push({\r\n      text: this.textInput.value,\r\n    });\r\n\r\n    localStorage.setItem(\"data\", JSON.stringify(this.data));\r\n    this.createTasks();\r\n  }\r\n //createTasks\r\n  createTasks() {\r\n    this.tasks.innerHTML = \"\";\r\n//map in datas:\r\n    this.data.forEach((task, index) => {\r\n      const taskDiv = (0,_helpres_js__WEBPACK_IMPORTED_MODULE_0__.createTaskDiv)(task.text, index, this.deleteTask.bind(this), this.editTask.bind(this));\r\n      this.tasks.appendChild(taskDiv);\r\n    });\r\n //reset input and form\r\n    this.resetForm();\r\n  }\r\n//metode reset input and form\r\n  resetForm() {\r\n    this.textInput.value = \"\";\r\n  }\r\n// medote delete task\r\n  deleteTask(index) {\r\n    this.data.splice(index, 1);\r\n    localStorage.setItem(\"data\", JSON.stringify(this.data));\r\n    this.createTasks();\r\n  }\r\n//metode edite task\r\n  editTask(index) {\r\n    const selectedTask = this.tasks.children[index];\r\n    this.textInput.value = selectedTask.children[0].innerHTML;\r\n    this.deleteTask(index);\r\n  }\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TodoList);\n\n//# sourceURL=webpack://todo(js)oop/./src/todoList.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _helpres_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
+
+
+
+class TodoList {
+  constructor(form, textInput, tasks, add) {
+    this.form = form;
+    this.textInput = textInput;
+    this.tasks = tasks;
+    this.add = add;
+
+    this.data = JSON.parse(localStorage.getItem("data")) || [];
+//eventListener:
+    this.addListeners();
+    this.createTasks();
+  }
+
+  addListeners() {
+    this.form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      this.formValidation();
+    });
+      
+    this.add.addEventListener("click", () => {
+      this.add.setAttribute("data-bs-dismiss", "");
+    });
+  }
+//form Validation
+  formValidation() {
+    if (this.textInput.value === "") {
+      return;
+    }
+      
+    this.acceptData();
+    this.add.setAttribute("data-bs-dismiss", "modal");
+    this.add.click();
+  }
+//acceptData
+  acceptData() {
+    this.data.push({
+      text: this.textInput.value,
+    });
+
+    localStorage.setItem("data", JSON.stringify(this.data));
+    this.createTasks();
+  }
+ //createTasks
+  createTasks() {
+    this.tasks.innerHTML = "";
+//map in datas:
+    this.data.forEach((task, index) => {
+      const taskDiv = (0,_helpres_js__WEBPACK_IMPORTED_MODULE_0__.createTaskDiv)(task.text, index, this.deleteTask.bind(this), this.editTask.bind(this));
+      this.tasks.appendChild(taskDiv);
+    });
+ //reset input and form
+    this.resetForm();
+  }
+//metode reset input and form
+  resetForm() {
+    this.textInput.value = "";
+  }
+// medote delete task
+  deleteTask(index) {
+    this.data.splice(index, 1);
+    localStorage.setItem("data", JSON.stringify(this.data));
+    this.createTasks();
+  }
+//metode edite task
+  editTask(index) {
+    const selectedTask = this.tasks.children[index];
+    this.textInput.value = selectedTask.children[0].innerHTML;
+    this.deleteTask(index);
+  }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TodoList);
+
+/***/ }),
+/* 12 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createTaskDiv": () => (/* binding */ createTaskDiv)
+/* harmony export */ });
+
+function createTaskDiv(text, id, deleteCallback, editCallback) {
+    const taskDiv = document.createElement("div");
+    taskDiv.setAttribute("id", id);
+  //creat text todo
+    const taskText = document.createElement("span");
+    taskText.classList.add("fw-bold");
+    taskText.innerHTML = text;
+  
+    const options = document.createElement("span");
+    options.classList.add("options");
+  //add editIcon to div
+    const editIcon = document.createElement("i");
+    editIcon.classList.add("fas", "fa-edit");
+    editIcon.setAttribute("data-bs-toggle", "modal");
+    editIcon.setAttribute("data-bs-target", "#form");
+    editIcon.addEventListener("click", () => editCallback(id));
+  //add deleteIcon to div
+    const deleteIcon = document.createElement("i");
+    deleteIcon.classList.add("fas", "fa-trash-alt");
+    deleteIcon.addEventListener("click", () => deleteCallback(id));
+  //add options to boxTodo
+    options.appendChild(editIcon);
+    options.appendChild(deleteIcon);
+  
+    taskDiv.appendChild(taskText);
+    taskDiv.appendChild(options);
+  
+    return taskDiv;
+  }
 
 /***/ })
-
-/******/ 	});
+/******/ 	]);
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
@@ -54,7 +555,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
+/******/ 			id: moduleId,
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -67,6 +568,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -95,12 +608,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _todoList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+
+
+//Access
+const todoList = new _todoList__WEBPACK_IMPORTED_MODULE_1__["default"](
+  document.getElementById("form"),
+  document.getElementById("textInput"),
+  document.getElementById("tasks"),
+  document.getElementById("add")
+);
+})();
+
 /******/ })()
 ;

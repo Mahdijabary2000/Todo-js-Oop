@@ -1,4 +1,4 @@
-
+import "./style/style.scss"
 import TodoList from './todoList';
 //Access
 const todoList = new TodoList(

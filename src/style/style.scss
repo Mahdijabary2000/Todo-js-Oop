@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    margin: 0 50px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
+    // background:linear-gradient(90deg,#03001e,#7303c0,#ec38bc,#fdeff9);
+  }
+  *::-webkit-scrollbar{
+    background-color: #fff;
+    width: 12px;
+  }
+  *::-webkit-scrollbar-track{
+
+  }
+  *::-webkit-scrollbar-thumb{
+    background-color: #bae6fd;
+    border-radius: 16px;
+
+  }
+  .conteinet{
+    margin-top: 2rem;
+  }
+  .app {
+    background-color: #cffafe;
+    width:500px;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title{
+    text-align: center;
+    color: #38bdf8;
+    font-weight: 900;
+    font-size: 35px;
+  }
+  .text{
+    text-align: center;
+    color: #e879f9;
+    font-family: monospace;
+
+  }
+  .add{
+    color: gray;
+  }
+  #addNew {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    width: 300px;
+    height: 40px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+  .fa-plus {
+    background-color:#f2b5d4 ;
+    padding: 8px;
+    border-radius: 3px;
+  }
+  #tasks {
+    display: flex;
+    flex-direction: column;  
+    align-items: center; 
+     gap: 14px;
+    width: 100%;
+  }
+
+  #tasks div {
+    background-color: #bae6fd;
+    border-radius: 6px;
+    padding: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    width: 300px;
+    height: 60px;
+  }
+  #tasks div .options {
+    justify-self: center;
+    display: flex;
+    gap: 20px;
+  }
+  
+  #tasks div .options i {
+    cursor: pointer;
+  }
+  .modal-dialog{
+    display: flex;
+    justify-content: center;
+  }
+  .modal-content{
+    
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius:1rem ;
+    width: 500px;
+    height: 250px;
+  }
+  .modal-title{
+    color: white;
+    
+  }
+  .modal-body{
+    display: flex;
+    align-items: center;
+
+    .form-control{
+        height: 30px;
+        outline: none;
+        
+
+    }
+
+  }
+  .btn{
+    padding: 0.5rem 2rem;
+  }
+  .btn-primary{
+            background-color: #a567ce;
+    color: white;
+    border: none;
+    font-size: 0.75rem;
+    &:hover{
+    background-color: #7303c0;
+    }
+  }
+  .btn-secondary{
+            background-color: #db79c1;
+    color: #fff;  
+     font-size: 0.75rem;
+     
+     &:hover{
+background-color: #ec38bc;
+     }
+     
+  }
+  .fa-edit,.fa-trash-alt{
+    color: #ec4899;
+
+  }
+  .fw-bold{
+    color: #38bdf8;
+    font-size: 14px;
+    font-weight: 100;
+    font-family: monospace;
+  }
