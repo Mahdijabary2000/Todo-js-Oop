@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Mahdijabary2000/Todo-js-Oop/issues"
   },
-  "homepage": "https://github.com/Mahdijabary2000/Todo-js-Oop#readme"
+  "homepage": "https://github.com/Mahdijabary2000/Todo-js-Oop#readme",
+  "devDependencies": {
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  }
 }
