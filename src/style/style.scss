@@ -8,16 +8,10 @@ body {
     margin: 0 50px;
     display: flex;
     justify-content: center;
-    // align-items: center;
-
-    // background:linear-gradient(90deg,#03001e,#7303c0,#ec38bc,#fdeff9);
   }
   *::-webkit-scrollbar{
     background-color: #fff;
     width: 12px;
-  }
-  *::-webkit-scrollbar-track{
-
   }
   *::-webkit-scrollbar-thumb{
     background-color: #bae6fd;
@@ -51,7 +45,7 @@ body {
   .add{
     color: gray;
   }
-  #addNew {
+  .addBox {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,34 +69,33 @@ body {
     align-items: center; 
      gap: 14px;
     width: 100%;
+
+      div {
+      background-color: #bae6fd;
+      border-radius: 6px;
+      padding: 9px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4px;
+      width: 300px;
+      height: 60px;
+           .options {
+          justify-self: center;
+          display: flex;
+          gap: 20px;
+                   i {
+                 cursor: pointer;
+                }
+          }
+      }
   }
 
-  #tasks div {
-    background-color: #bae6fd;
-    border-radius: 6px;
-    padding: 9px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4px;
-    width: 300px;
-    height: 60px;
-  }
-  #tasks div .options {
-    justify-self: center;
-    display: flex;
-    gap: 20px;
-  }
-  
-  #tasks div .options i {
-    cursor: pointer;
-  }
   .modal-dialog{
     display: flex;
     justify-content: center;
   }
   .modal-content{
-    
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
     border-radius:1rem ;
@@ -111,7 +104,6 @@ body {
   }
   .modal-title{
     color: white;
-    
   }
   .modal-body{
     display: flex;
@@ -120,38 +112,35 @@ body {
     .form-control{
         height: 30px;
         outline: none;
-        
-
     }
-
   }
   .btn{
     padding: 0.5rem 2rem;
   }
   .btn-primary{
-            background-color: #a567ce;
-    color: white;
-    border: none;
-    font-size: 0.75rem;
-    &:hover{
-    background-color: #7303c0;
+      background-color: #a567ce;
+      color: white;
+      border: none;
+      font-size: 0.75rem;
+      &:hover{
+      background-color: #7303c0;
     }
   }
   .btn-secondary{
-            background-color: #db79c1;
+    background-color: #db79c1;
     color: #fff;  
-     font-size: 0.75rem;
+    font-size: 0.75rem;
      
      &:hover{
-background-color: #ec38bc;
+          background-color: #ec38bc;
      }
      
   }
-  .fa-edit,.fa-trash-alt{
+  .edit,.trash{
     color: #ec4899;
 
   }
-  .fw-bold{
+  .textTodo{
     color: #38bdf8;
     font-size: 14px;
     font-weight: 100;
