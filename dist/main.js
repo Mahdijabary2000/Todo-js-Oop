@@ -422,9 +422,10 @@ module.exports = function (cssWithMappingToString) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "TodoList": () => (/* binding */ TodoList)
 /* harmony export */ });
-/* harmony import */ var _helpres_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
+/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _helpres_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(12);
 
 
 
@@ -434,9 +435,7 @@ class TodoList {
     this.textInput = textInput;
     this.tasks = tasks;
     this.add = add;
-
     this.data = JSON.parse(localStorage.getItem("data")) || [];
-//eventListener:
     this.addListeners();
     this.createTasks();
   }
@@ -446,60 +445,56 @@ class TodoList {
       e.preventDefault();
       this.formValidation();
     });
-      
+
     this.add.addEventListener("click", () => {
       this.add.setAttribute("data-bs-dismiss", "");
     });
   }
-//form Validation
+
   formValidation() {
     if (this.textInput.value === "") {
       return;
     }
-      
+    console.log("success");
     this.acceptData();
     this.add.setAttribute("data-bs-dismiss", "modal");
     this.add.click();
   }
-//acceptData
+
   acceptData() {
     this.data.push({
       text: this.textInput.value,
     });
-
     localStorage.setItem("data", JSON.stringify(this.data));
     this.createTasks();
   }
- //createTasks
+
   createTasks() {
     this.tasks.innerHTML = "";
-//map in datas:
-    this.data.forEach((task, index) => {
-      const taskDiv = (0,_helpres_js__WEBPACK_IMPORTED_MODULE_0__.createTaskDiv)(task.text, index, this.deleteTask.bind(this), this.editTask.bind(this));
-      this.tasks.appendChild(taskDiv);
+    this.data.forEach((taskData, index) => {
+      const task = new _helpres_js__WEBPACK_IMPORTED_MODULE_1__.Task(taskData, index, this);
+      this.tasks.appendChild(task.element);
     });
- //reset input and form
+
     this.resetForm();
   }
-//metode reset input and form
+
   resetForm() {
     this.textInput.value = "";
   }
-// medote delete task
+
   deleteTask(index) {
     this.data.splice(index, 1);
     localStorage.setItem("data", JSON.stringify(this.data));
     this.createTasks();
   }
-//metode edite task
-  editTask(index) {
-    const selectedTask = this.tasks.children[index];
-    this.textInput.value = selectedTask.children[0].innerHTML;
-    this.deleteTask(index);
+
+  updateTask(index, newText) {
+    this.data[index].text = newText;
+    localStorage.setItem("data", JSON.stringify(this.data));
+    this.createTasks();
   }
 }
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TodoList);
 
 /***/ }),
 /* 12 */
@@ -507,38 +502,58 @@ class TodoList {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createTaskDiv": () => (/* binding */ createTaskDiv)
+/* harmony export */   "Task": () => (/* binding */ Task)
 /* harmony export */ });
+/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 
-function createTaskDiv(text, id, deleteCallback, editCallback) {
-    const taskDiv = document.createElement("div");
-    taskDiv.setAttribute("id", id);
-  //creat text todo
+class Task {
+  constructor(taskData, index, parent) {
+    this.text = taskData.text;
+    this.index = index;
+    this.parent = parent;
+    this.initElement();
+  }
+
+  initElement() {
+    this.element = document.createElement("div");
+    this.element.setAttribute("id", this.index);
+
     const taskText = document.createElement("span");
     taskText.classList.add("fw-bold","textTodo");
-    taskText.innerHTML = text;
-  
+    taskText.innerHTML = this.text;
+
     const options = document.createElement("span");
     options.classList.add("options");
-  //add editIcon to div
+
     const editIcon = document.createElement("i");
     editIcon.classList.add("fas", "fa-edit","edit");
     editIcon.setAttribute("data-bs-toggle", "modal");
     editIcon.setAttribute("data-bs-target", "#form");
-    editIcon.addEventListener("click", () => editCallback(id));
-  //add deleteIcon to div
+    editIcon.addEventListener("click", () => this.editTask(editIcon));
+
     const deleteIcon = document.createElement("i");
     deleteIcon.classList.add("fas", "fa-trash-alt","trash");
-    deleteIcon.addEventListener("click", () => deleteCallback(id));
-  //add options to boxTodo
+    deleteIcon.addEventListener("click", () => {
+      this.deleteTask(this.index);
+    });
+
     options.appendChild(editIcon);
     options.appendChild(deleteIcon);
-  
-    taskDiv.appendChild(taskText);
-    taskDiv.appendChild(options);
-  
-    return taskDiv;
+
+    this.element.appendChild(taskText);
+    this.element.appendChild(options);
   }
+
+  deleteTask(index) {
+    this.parent.deleteTask(index);
+  }
+
+  editTask(icon) {
+    const selectedTask = icon.parentElement.parentElement;
+    this.parent.textInput.value = selectedTask.children[0].innerHTML;
+    this.deleteTask(selectedTask.getAttribute("id"));
+  }
+}
 
 /***/ })
 /******/ 	]);
@@ -619,11 +634,11 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _todoList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _todoList_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 
 
-//Access
-const todoList = new _todoList__WEBPACK_IMPORTED_MODULE_1__["default"](
+
+const todoList = new _todoList_js__WEBPACK_IMPORTED_MODULE_1__.TodoList(
   document.getElementById("form"),
   document.getElementById("textInput"),
   document.getElementById("tasks"),
